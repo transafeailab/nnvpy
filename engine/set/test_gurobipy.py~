@@ -1,0 +1,21 @@
+'''
+Test gurobipy
+'''
+
+import numpy as np
+import gurobipy as gp
+
+def test_LP():
+    
+    Q = np.diag([1, 2, 3])
+    A = np.array([[1, 2, 3], [1, 1, 0]])
+    b = np.array([4, 1])
+    m = gp.Model()
+    x = m.addMVar(3, ub=1.0)
+    m.setObjective(x @ Q @ x)
+    m.addConstr(A@x >= b)
+
+    m.optimize()
+
+if __name__=='__main__':
+    test_LP()
