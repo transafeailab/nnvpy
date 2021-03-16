@@ -1,0 +1,7 @@
+--extra-index-url https://pypi.gurobi.com
+binarytree==6.2.0
+cvxopt==1.2.6
+gurobipy==9.1.1
+numpy==1.19.5
+scipy==1.5.4
+polytope==0.2.3
