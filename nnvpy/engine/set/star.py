@@ -66,7 +66,6 @@ class Star(object):
             c = np.zeros((1, A.shape[1]))
             c[0, 0] = 1
             rs = lp(c, A_ub=A, b_ub=b, method='simplex')
-            print(rs)
             if rs.status == 0:
                 return False
             else:
